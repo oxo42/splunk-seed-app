@@ -5,7 +5,18 @@ splunk-seed-app is a seed for a [Splunk](http://splunk.com/) application.  The i
 
 ## Directory layout
 
-
+    splunk-seed-app
+    |--source                     # source directory: Gets bundled as a tgz into target
+    |  |--appserver
+    |  |  \--static
+    |  |--bin
+    |  |--default
+    |  |  \--data
+    |  |     \--views
+    |  |        \--nav
+    |  \--meta
+    |--target                     # output directory (ignored)
+    \--tests                      # test: any tests go here
 
 ## Installation
 
@@ -17,3 +28,11 @@ git init
 git add -A
 git commit -m "Initial Import"
 ```
+
+## Build
+
+I haven't decided on the build system yet.  The options are:
+* [Gradle](http://gradle.org/)
+* [Maven](https://maven.apache.org/)
+* [PyBuilder](http://pybuilder.github.io/)
+* [Python Setuptools](https://pythonhosted.org/setuptools/)
